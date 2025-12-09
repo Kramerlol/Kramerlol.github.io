@@ -1,0 +1,123 @@
+﻿/* ====== Light/Dark Theme Variables ====== */
+:root {
+    --bg: #ffffff;
+    --text: #333333;
+    --sidebar-bg: #fafafa;
+    --sidebar-border: #eeeeee;
+    --accent: #1de2bc;
+}
+
+body.dark {
+    --bg: #111111;
+    --text: #eeeeee;
+    --sidebar-bg: #1a1a1a;
+    --sidebar-border: #333333;
+    --accent: #39d8c9;
+}
+
+/* ====== Global ====== */
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ====== Sidebar ====== */
+.sidebar {
+    background: var(--sidebar-bg);
+    border-right: 1px solid var(--sidebar-border);
+    width: 260px;
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    display: block;
+    margin: 0 auto 1rem;
+    border: 3px solid var(--accent);
+}
+
+.name {
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.tagline {
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text);
+    opacity: 0.8;
+    margin-bottom: 1.5rem;
+}
+
+.nav a {
+    display: block;
+    margin: 0.5rem 0;
+    text-decoration: none;
+    color: var(--text);
+    border-bottom: 2px solid transparent;
+}
+
+    .nav a:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+.social a {
+    display: block;
+    color: var(--text);
+    opacity: 0.8;
+    text-decoration: none;
+    margin: 0.3rem 0;
+}
+
+    .social a:hover {
+        color: var(--accent);
+        opacity: 1;
+    }
+
+/* ====== Theme Toggle Button ====== */
+.theme-toggle {
+    margin-top: 2rem;
+    background: none;
+    border: 1px solid var(--sidebar-border);
+    color: var(--text);
+    padding: 0.5rem 1rem;
+    width: 100%;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+    .theme-toggle:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+/* ====== Content Area ====== */
+.content {
+    padding: 3rem;
+    flex: 1;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+/* ====== Responsive ====== */
+@media (max-width: 700px) {
+    .layout {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+}
