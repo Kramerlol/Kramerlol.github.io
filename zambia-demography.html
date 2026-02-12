@@ -40,32 +40,77 @@
                 margin-bottom: 2rem;
             }
 
+        /* References panel: readable in both light and dark modes */
+        /* Default (light mode) — dark text, subtle light heading color, transparent background */
         .references-section {
-            background: transparent !important;
-            color: #111111 !important;
-            padding: 2rem;
-            border-radius: 8px;
-            margin-top: 3rem;
+          background: transparent;
+          color: #111111;
+          padding: 2rem;
+          border-radius: 8px;
+          margin-top: 3rem;
+          background-clip: padding-box;
         }
-
+        
+        /* Heading and link colors for light mode */
+        .references-section h2,
+        .references-section h3 {
+          color: #198A00;
+          margin-top: 0;
+        }
+        .references-section a {
+          color: #0b5ed7; /* accessible blue for links in light mode */
+          text-decoration: underline;
+        }
+        
+        /* High-specificity override if other styles interfere */
+        body .infographic-container .references-section {
+          color: #111111;
+          background: transparent;
+        }
+        
+        /* Dark-mode rules: support both .dark class toggles and prefers-color-scheme */
         html.dark .references-section,
-        body.dark .references-section {
-          color: #e6eef8 !important;               /* light, readable text in dark mode */
-          background: rgba(255, 255, 255, 0.02) !important; /* subtle panel in dark mode */
-        }
-
-        /* Also support prefers-color-scheme for browsers that use system theme */
+        body.dark .references-section,
         @media (prefers-color-scheme: dark) {
           .references-section {
-            color: #e6eef8 !important;
-            background: rgba(255, 255, 255, 0.02) !important;
+            background: rgba(255, 255, 255, 0.03); /* faint panel for separation */
+            color: #e6eef8;                         /* readable light text */
+          }
+        
+          .references-section h2,
+          .references-section h3 {
+            color: #9fe08a;                         /* lighter green for headings */
+          }
+        
+          .references-section a {
+            color: #93c5fd;                         /* lighter blue for links in dark mode */
           }
         }
-
-            .references-section h2 {
-                color: #198A00;
-                margin-top: 0;
-            }
+        
+        /* If your theme script toggles .dark on <html> or <body>, include both selectors */
+        html.dark .references-section,
+        body.dark .references-section {
+          background: rgba(255, 255, 255, 0.03);
+          color: #e6eef8;
+        }
+        
+        /* Small utility to ensure small text remains legible */
+        .references-section,
+        .references-section .citation {
+          font-size: 0.95rem;
+          line-height: 1.6;
+        }
+        
+        /* If an external stylesheet still overrides these rules, use a targeted !important fallback */
+        body .infographic-container .references-section {
+          color: #111111 !important;
+          background: transparent !important;
+        }
+        html.dark body .infographic-container .references-section,
+        body.dark .infographic-container .references-section {
+          color: #e6eef8 !important;
+          background: rgba(255,255,255,0.03) !important;
+        }
 
         .citation {
             margin-bottom: 1rem;
@@ -282,4 +327,5 @@
 </body>
 
 </html>
+
 
