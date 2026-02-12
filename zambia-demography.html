@@ -48,6 +48,20 @@
             margin-top: 3rem;
         }
 
+        html.dark .references-section,
+        body.dark .references-section {
+          color: #e6eef8 !important;               /* light, readable text in dark mode */
+          background: rgba(255, 255, 255, 0.02) !important; /* subtle panel in dark mode */
+        }
+
+        /* Also support prefers-color-scheme for browsers that use system theme */
+        @media (prefers-color-scheme: dark) {
+          .references-section {
+            color: #e6eef8 !important;
+            background: rgba(255, 255, 255, 0.02) !important;
+          }
+        }
+
             .references-section h2 {
                 color: #198A00;
                 margin-top: 0;
@@ -268,3 +282,4 @@
 </body>
 
 </html>
+
