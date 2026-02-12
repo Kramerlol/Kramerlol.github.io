@@ -1,0 +1,272 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zambia Demographic Trajectory - An Infographic | Andrew M. Kramer</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for this page */
+        .project-hero {
+            background: linear-gradient(135deg, #198A00 0%, #EF7D00 100%);
+            color: white;
+            padding: 3rem 2rem;
+            margin-bottom: 2rem;
+            border-radius: 8px;
+        }
+
+            .project-hero h1 {
+                margin: 0 0 0.5rem 0;
+                font-size: 2.5rem;
+            }
+
+            .project-hero p {
+                margin: 0;
+                font-size: 1.2rem;
+                opacity: 0.95;
+            }
+
+        .infographic-container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+            .infographic-container img {
+                width: 100%;
+                height: auto;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                margin-bottom: 2rem;
+            }
+
+        .references-section {
+            background: #f5f5f0;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-top: 3rem;
+        }
+
+            .references-section h2 {
+                color: #198A00;
+                margin-top: 0;
+            }
+
+        .citation {
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .citation-number {
+            font-weight: bold;
+            color: #EF7D00;
+        }
+
+        .download-section {
+            text-align: center;
+            margin: 3rem 0;
+        }
+
+        .download-btn {
+            display: inline-block;
+            background: #198A00;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0.5rem;
+            transition: background 0.3s;
+        }
+
+            .download-btn:hover {
+                background: #146f00;
+            }
+
+            .download-btn.secondary {
+                background: #EF7D00;
+            }
+
+                .download-btn.secondary:hover {
+                    background: #d66f00;
+                }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <button id="theme-toggle" onclick="toggleTheme()">🌙</button>
+    </nav>
+
+    <main>
+        <div class="project-hero">
+            <h1>Copper, Cohorts, Crisis</h1>
+            <p>Zambia's Demographic Trajectory across 3 Regimes (1964-2024)</p>
+        </div>
+
+        <div class="infographic-container">
+            <h2>Executive Summary</h2>
+            <p>
+                This infographic explores why Zambia's demographic transition stalled despite
+                massive copper wealth and educational expansion. Using data from the Wittgenstein
+                Centre, UN World Population Prospects, and World Bank, I analyze three
+                political-economic regimes to show how privatized extraction prevented the
+                domestic investment needed for demographic transformation.
+                Botswana, which retained state control of diamond revenues, serves as a counterfactual.
+            </p>
+
+            <div class="download-section">
+                <a href="assets/zambia-infographic.png" class="download-btn" download>
+                    📊 Download Infographic (PNG)
+                </a>
+                <a href="assets/zambia-infographic.pdf" class="download-btn secondary" download>
+                    📄 Download PDF Version
+                </a>
+            </div>
+
+            <!-- Infographic will be displayed here -->
+            <img src="assets/zambia-infographic.png"
+                 alt="Zambia Demographic Paradox Infographic"
+                 loading="lazy">
+
+            <h2>Key Findings</h2>
+            <ul>
+                <li><strong>Population Growth:</strong> 3.7M (1965) → 19.1M (2020) = 416% increase</li>
+                <li><strong>Education Paradox:</strong> Secondary/post-secondary attainment visible by 2020, but fertility stayed at 4.1 children/woman</li>
+                <li><strong>Life Expectancy Crisis:</strong> Fell 7 years during structural adjustment (1990-2000), recovered via external donors (PEPFAR, Global Fund)—not copper revenues</li>
+                <li><strong>Health Financing:</strong> Government spending stayed flat despite copper boom; external aid peaked at $137/capita (2019)</li>
+                <li><strong>Inequality:</strong> Gini rose from 49.1 (1998) → 51.5 (2022) as elites captured mineral rents</li>
+                <li><strong>Botswana Counterfactual:</strong> State control of diamond revenues enabled fertility decline to 2.7 (vs. Zambia's 4.1)</li>
+            </ul>
+
+            <h2>Methodology</h2>
+            <p>
+                All visualizations created in R using:
+            </p>
+            <ul>
+                <li><code>wcde</code> package for population pyramids by education</li>
+                <li><code>wpp2024</code> for UN demographic indicators</li>
+                <li><code>wbstats</code> / <code>WDI</code> for World Bank economic data</li>
+                <li><code>ggplot2</code> + <code>patchwork</code> for data visualization</li>
+            </ul>
+            <p>
+                <a href="assets/zambia-analysis.R" download>📥 Download R Code</a> (reproducible analysis)
+            </p>
+
+            <!-- REFERENCES SECTION -->
+            <div class="references-section">
+                <h2>Data Sources</h2>
+
+                <div class="citation">
+                    <strong>Wittgenstein Centre for Applied Systems Analysis</strong><br>
+                    K.C., S., Dhakad, M., Potancokova, M., et al. (2024). Updating the Shared Socioeconomic Pathways (SSPs) Global Population and Human Capital Projections. IIASA Working Paper WP-24-003.<br>
+                    🔗 <a href="http://www.wittgensteincentre.org/dataexplorer">Data Explorer</a>
+                </div>
+
+                <div class="citation">
+                    <strong>United Nations Population Division</strong><br>
+                    (2024). World Population Prospects 2024 (Version 1.1-3).<br>
+                    🔗 <a href="https://population.un.org/wpp">https://population.un.org/wpp</a>
+                </div>
+
+                <div class="citation">
+                    <strong>World Bank</strong><br>
+                    Arel-Bundock, V. (2025). WDI: World Development Indicators (R package version 2.7.9).<br>
+                    🔗 <a href="https://vincentarelbundock.github.io/WDI/">WDI Package</a>
+                </div>
+
+                <div class="citation">
+                    <strong>World Health Organization</strong><br>
+                    (2025). Global Health Expenditure Database.<br>
+                    🔗 <a href="https://apps.who.int/nha/database/Select/Indicators/en">WHO Database</a>
+                </div>
+
+                <h2>Literature Cited</h2>
+
+                <div class="citation">
+                    <span class="citation-number">1.</span> Baskaran, G., & Yu, F. (2024). Recommendations for Building Zambia's Copper Industry. CSIS. <a href="https://www.csis.org/analysis/recommendations-building-zambias-copper-industry">Link</a>
+                </div>
+
+                <div class="citation">
+                    <span class="citation-number">2.</span> Besada, H. & O'Bright, B. (2018). Policy Impacts on Africa's Extractive Sector. <em>Revue Gouvernance</em>, 15(2), 86–105. <a href="https://doi.org/10.7202/1058089ar">DOI</a>
+                </div>
+
+                <div class="citation">
+                    <span class="citation-number">3.</span> Hidayat, M. (2026). Zambia copper output growth surges. <em>Discovery Alert</em>. <a href="https://discoveryalert.com.au/geology-copper-concentration-zambia-mining-2026/">Link</a>
+                </div>
+
+                <div class="citation">
+                    <span class="citation-number">4.</span> Larmer, M. (2005). Reaction & Resistance to Neo-Liberalism in Zambia. <em>Review of African Political Economy</em>, 32(103), 29-45. <a href="http://dx.doi.org/10.1080/03056240500120992">DOI</a>
+                </div>
+
+                <div class="citation">
+                    <span class="citation-number">5.</span> Li, P. (2010). <em>The myth and reality of Chinese investors</em> (Occasional Paper No. 62). SAIIA. <a href="https://africaportal.org/wp-content/uploads/2023/05/SAIIA_Occasional_Paper_62.pdf">PDF</a>
+                </div>
+
+                <div class="citation">
+                    <span class="citation-number">6.</span> Lutz, W., et al. (2019). Education rather than age structure brings demographic dividend. <em>PNAS</em>, 116(26), 12798-12803. <a href="https://doi.org/10.1073/pnas.1820362116">DOI</a>
+                </div>
+
+                <div class="citation">
+                    <span class="citation-number">7.</span> Mushinge, G. (2021). Nationalizing Zambia's copper mines. <em>DW</em>. <a href="https://www.dw.com/en/nationalizing-zambias-copper-mines/a-56843152">Link</a>
+                </div>
+
+                <div class="citation">
+                    <span class="citation-number">8.</span> Vandome, C. (2023). <em>Zambia's international relations</em>. Royal Institute of International Affairs. <a href="https://doi.org/10.55317/9781784135553">DOI</a>
+                </div>
+
+                <div class="citation">
+                    <span class="citation-number">9.</span> Wallerstein, I. (1974). <em>The modern world-system I</em>. New York: Academic Press.
+                </div>
+
+                <h2>Image Credits</h2>
+
+                <div class="space-y-3 text-sm leading-relaxed">
+                    <div>
+                        <strong>International Resources Holdings</strong>. Mopani-Mine-Day-2-068 (edited) [JPEG].
+                        <a href="https://www.irh.ae/wp-content/uploads/2024/10/Mopani-Mine-Day-2-068_edited.jpg" target="_blank" rel="noopener noreferrer">irh.ae/…/Mopani-Mine-Day-2-068_edited.jpg</a>
+                    </div>
+
+                    <div>
+                        <strong>Mining Technology</strong>. min-5-i-770x433 [JPEG].
+                        <a href="https://www.mining-technology.com/wp-content/uploads/sites/19/2024/04/min-5-i-770x433.jpg" target="_blank" rel="noopener noreferrer">mining-technology.com/…/min-5-i-770x433.jpg</a>
+                    </div>
+
+                    <div>
+                        <strong>National AIDS Council Zambia</strong>. Gemini_generated_image_kq8uyxkq8uyxkq8u [PNG].
+                        <a href="https://nac.org.zm/wp-content/uploads/2026/01/Gemini_Generated_Image_kq8uyxkq8uyxkq8u-300x300.png" target="_blank" rel="noopener noreferrer">nac.org.zm/…/Gemini_Generated_Image_kq8uyxkq8uyxkq8u-300x300.png</a>
+                    </div>
+
+                    <div>
+                        <strong>Pixelz</strong>. Zambia flag UHD 4K wallpaper [PNG/JPEG].
+                        <a href="https://pixelz.cc/images/zambia-flag-uhd-4k-wallpaper/" target="_blank" rel="noopener noreferrer">pixelz.cc/…/zambia-flag-uhd-4k-wallpaper</a>
+                    </div>
+                </div>
+
+                <h2>Context</h2>
+                <p>
+                    This infographic was finalized for "234003-1 Population dynamics and human capital in a
+                    global perspective" at the University of Vienna in February 2026.
+                    It applies world systems theory and demographic transition theory to understand why
+                    resource-rich Zambia experienced different outcomes than neighboring Botswana.
+                </p>
+
+                <p style="text-align: center; margin-top: 3rem; color: #666;">
+                    <strong>License:</strong> This work is shared under a Creative Commons Attribution 4.0
+                    International License. You may use this infographic with proper attribution.<br>
+                    <strong>Citation:</strong> Andrew M. Kramer (2026). Copper, Cohorts, and Crisis: Zambia's
+                    Demographic Trajectory. Retrieved from https://kramerlol.github.io/zambia-demography.html
+                </p>
+            </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Andrew M. Kramer</p>
+    </footer>
+
+    <script src="theme.js"></script>
+</body>
+</html>
