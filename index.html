@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,7 +7,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
+
+    <!-- NAVBAR -->
+    <nav class="p-4 shadow bg-gray-100 dark:bg-gray-800">
+        <div class="container mx-auto flex justify-between">
+            <a href="index.html" class="font-semibold text-xl">Andrew Kramer</a>
+
+            <div class="space-x-4">
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="cv.html">CV</a>
+                <a href="contact.html">Contact</a>
+                <button onclick="toggleDarkMode()">🌙</button>
+            </div>
+        </div>
+    </nav>
 
     <div class="layout">
         <aside class="sidebar">
@@ -18,7 +33,7 @@
 
             <nav class="nav">
                 <a href="index.html">Home</a>
-                <!--a href="research.html">Research</a-->
+                <!-- <a href="research.html">Research</a> -->
                 <a href="about.html">Research Interests</a>
                 <a href="projects.html">Projects</a>
                 <a href="cv.pdf">CV</a>
@@ -38,31 +53,33 @@
 
         <main class="content">
             <h2>Welcome</h2>
-            <p>
-                Welcome!
-                A little about me: I am a business intellgience analyst and data scientist focused on research in demography,
-                population health, and environmental sustainability. My research focuses on income and
-                wealth inequality, assortative mating, aging, mortality modeling, and population-health mechanisms.
-                My work includes population forecasting, care burden measurement, predictive modeling,
-                and real-time demographic data integration.
-                
+            <p class="leading-relaxed text-lg">
+                Welcome! A little about me: I am a business intelligence analyst
+                and data scientist focused on research in demography, population
+                health, and environmental sustainability. My research focuses on
+                income and wealth inequality, assortative mating, aging, mortality
+                modeling, and population-health mechanisms. My work includes
+                population forecasting, care burden measurement, predictive
+                modeling, and real-time demographic data integration.
+                <br>
                 Technical stack: SQL, R, Python, Power BI, Tableau
-                
+                <br>
                 10 years of experience in business intelligence, data engineering, health informatics
-
+                <br><br>
                 Education
-                •	MSc Global Demography from Universität Wien
-                •	MSc in Health Care Informatics from the University of Central Florida
-                •	BA in Philosophy from the University of Florida
             </p>
+
+            <ul class="list-disc ml-8 mt-4 space-y-2">
+                <li>MSc Global Demography from Universität Wien</li>
+                <li>MSc in Health Care Informatics from the University of Central Florida</li>
+                <li>BA in Philosophy from the University of Florida</li>
+            </ul>
 
             <p>
                 This website is a collection of my research, projects, data tools, and writing.
             </p>
         </main>
-
     </div>
-    <script src="theme.js"></script>
 
 </body>
 </html>
