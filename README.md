@@ -7,7 +7,6 @@ A lightweight, static personal portfolio built with plain HTML, CSS, and a small
 ## Live Site
 
 🌐 **[https://andrew-kramer.github.io/](https://kramerlol.github.io)**  
-*(Replace with your actual GitHub Pages or custom domain URL.)*
 
 ---
 
@@ -158,14 +157,3 @@ Code in this repository is provided as-is for reference. If you reuse the layout
 - **LinkedIn:** [linkedin.com/in/andrew-kramer-47346673](https://www.linkedin.com/in/andrew-kramer-47346673/)
 - **GitHub:** [github.com/Kramerlol](https://github.com/Kramerlol)
 ```
-
----
-
-### How to use it
-
-1. Create or overwrite `README.md` in the root of your repo.
-2. Replace `https://andrew-kramer.github.io/` with your actual site URL.
-3. Adjust the roadmap or file list if you add/remove pages.
-4. The **Known Issues** section clearly documents the dark-mode bug for future-you (or any collaborator).
-
-If you want, I can also generate a companion GitHub **Issue** template or a TODO comment block you can paste directly into the affected files.
