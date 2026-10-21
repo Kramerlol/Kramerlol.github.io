@@ -1,4 +1,4 @@
-﻿/* ====== Light/Dark Theme Variables ====== */
+/* ====== Light/Dark Theme Variables ====== */
 :root {
     --bg: #ffffff;
     --text: #333333;
@@ -7,7 +7,7 @@
     --accent: #1de2bc;
 }
 
-body.dark {
+html.dark {
     --bg: #111111;
     --text: #eeeeee;
     --sidebar-bg: #1a1a1a;
@@ -49,6 +49,7 @@ body {
 .name {
     text-align: center;
     margin-bottom: 0.3rem;
+    color: var(--text);   /* <-- prevents Tailwind body color from washing it out */
 }
 
 .tagline {
