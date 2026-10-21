@@ -1,9 +1,12 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Projects – Andrew Kramer</title>
+    <script>
+        tailwind.config = { darkMode: 'class' };
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
@@ -17,7 +20,7 @@
                 <a href="projects.html">Projects</a>
                 <a href="cv.pdf">CV</a>
                 <a href="contact.html">Contact</a>
-                <button onclick="toggleDarkMode()">🌙</button>
+                <button onclick="toggleTheme()">🌙</button>
             </div>
         </div>
     </nav>
@@ -25,7 +28,6 @@
     <section class="container mx-auto p-8">
         <h1 class="text-3xl font-bold mb-8">Projects</h1>
 
-        <!-- Example Project Cards -->
         <div class="grid md:grid-cols-2 gap-8">
             <div class="p-6 border rounded-lg dark:border-gray-700 shadow-sm">
                 <h2 class="text-xl font-semibold mb-2">Mortality Forecasting (Lee–Carter)</h2>
@@ -82,5 +84,7 @@
     <footer class="text-center p-4 text-sm bg-gray-100 dark:bg-gray-800 mt-12">
         © 2026 Andrew M. Kramer
     </footer>
+
+    <script src="theme.js"></script>
 </body>
 </html>
