@@ -1,0 +1,45 @@
+=== Live artifact checks Tue Nov 10 17:19:54 UTC 2026 ===
+sitemap.xml: HTTP/2 200 
+robots.txt: HTTP/2 200 
+assets/favicon.svg: HTTP/2 200 
+assets/favicon-32.png: HTTP/2 200 
+assets/apple-touch-icon.png: HTTP/2 200 
+404.html: HTTP/2 200 
+index.html: HTTP/2 200 
+about.html: HTTP/2 200 
+contact.html: HTTP/2 200 
+projects.html: HTTP/2 200 
+zambia-demography.html: HTTP/2 200 
+styles.css: HTTP/2 200 
+theme.js: HTTP/2 200 
+cv.pdf: HTTP/2 200 
+assets/profile.jpg: HTTP/2 200 
+assets/zambia-analysis.R: HTTP/2 200 
+assets/zambia-infographic.pdf: HTTP/2 200 
+assets/zambia-infographic.png: HTTP/2 200 
+=== 404 status ===
+404
+=== 404 body matches 404.html? ===
+IDENTICAL to 404.html
+=== content-length sanity ===
+index.html: content-length: 6422
+cv.pdf: content-length: 2625610
+assets/zambia-infographic.pdf: content-length: 7893679
+assets/zambia-infographic.png: content-length: 1788924
+assets/profile.jpg: content-length: 2473862
+=== sitemap parses ===
+live sitemap.xml parses OK
+
+=== Lighthouse FINAL vs Phase 0b baseline ===
+| Category | Base D | Final D | ΔD | Base M | Final M | ΔM |
+| performance | 90 | 94 | +4 | 94 | 92 | -2 |
+| accessibility | 100 | 100 | 0 | 100 | 100 | 0 |
+| best-practices | 96 | 100 | +4 | 96 | 100 | +4 |
+| seo | 91 | 100 | +9 | 91 | 100 | +9 |
+Full JSON: docs/final/lighthouse-final-{desktop,mobile}.json
+
+=== Regression gate ===
+69/69 PASS (docs/final/regression-gate.txt): console zero errors all 5 pages; every toggle flips html.dark + computed body/main colors page-wide; reload persistence; OS-follow; aria-pressed on all buttons; 1 canonical + 1 description + og:title + skip-link + favicon links per page.
+
+=== axe FINAL vs Phase 2 ===
+Identical per-page counts (projects contrast 2/2, contact 3/0, zambia 11/27; index/about/404 zero) — ZERO new violations; only known issue-#3 color-contrast nodes.

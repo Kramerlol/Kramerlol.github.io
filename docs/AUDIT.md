@@ -120,3 +120,43 @@ Key metrics: FCP 2.3 s / LCP 2.3 s / CLS 0 on both form factors; TBT 290 ms (des
 - 2026-11-10 (Phase 3): `assets/favicon.svg` is an auto-generated placeholder monogram (dark rounded square + white "AK") with Chromium-rendered PNG fallbacks — owner will replace with their own design later.
 - 2026-11-10 (Phase 3): `og:image` uses `assets/profile.jpg` (2.47 MB) — oversized for social previews; advisory tied to #15.
 - 2026-11-10 (Phase 3): canonical URLs match the served `.html` URLs (`https://kramerlol.github.io/<page>.html`); index canonical is the bare root URL.
+
+## Final wrap-up (Phase 4, 2026-11-10)
+
+### Metrics before → after
+
+| Metric | Before (Phase 0b baseline) | After (Phase 4 final, live) |
+|---|---|---|
+| Lighthouse Performance (desktop) | 90 | 94 |
+| Lighthouse Performance (mobile) | 94 | 92 |
+| Lighthouse Accessibility (D/M) | 100 / 100 | 100 / 100 |
+| Lighthouse Best Practices (D/M) | 96 / 96 | 100 / 100 |
+| Lighthouse SEO (D/M) | 91 / 91 | 100 / 100 |
+| Console errors (all 5 pages) | `tailwind is not defined` + CDN warning every load | 0 errors |
+| Dark mode | sidebar-only strip | whole page, all 5 pages, computed-style verified |
+| axe violations | 0 (index only measured) | 0 new; only pre-existing issue-#3 contrast nodes |
+| SEO plumbing | none | meta/OG/Twitter/canonical/sitemap/robots/favicon/404/skip links |
+| 404 handling | GitHub default | custom 404.html (byte-identical live) |
+
+### Issues opened / closed / still open
+
+- **Closed (#5–#10, #12, #16):** SEO meta, OG/Twitter, canonical, sitemap/robots, favicon, 404 page, skip links, README — addressed in Phase 3 (PR #18; most auto-closed by the merge's `Closes #n` keywords), verified live in Phase 4.
+- **Still open, parked by owner decision 2026-11-10:** #3 (contrast — zambia frozen part needs owner approval), #4 (Play CDN — keep per policy), #11 (SRI — N/A while Play CDN stays), #13 (external links — owner decision), #14 (zambia http hrefs — owner-gated), #15 (asset weight advisory — owner-gated).
+- **New advisory (#19):** consider `Disallow: /docs/` in robots.txt (docs/ is publicly served; no secrets found — advisory only).
+
+### Known limitations
+
+- Tailwind **Play CDN in production** (#4): runtime-compiler JS + console warning; dark-mode config must sit after the CDN tag. Kept by owner policy.
+- **Asset weight** (#15 advisory): zambia page ships ~10 MB before content (7.89 MB embedded PDF + 1.79 MB PNG); profile.jpg 2.47 MB; cv.pdf 2.63 MB. Originals stay per keep-all-files policy.
+- **iOS Safari cannot reliably render the 7.9 MB embedded PDF** (`<embed>`). Owner decision: **KEEP AS IS** — the page's PNG and PDF download buttons provide alternatives. Do not change without explicit owner approval.
+- **External links may be dead/hotlink-blocked** (#13) and zambia keeps two `http://` hrefs (#14) — owner-gated.
+- **Contrast** (#3): projects (orange buttons), contact (blue-500 links), zambia (download/citation colors) — owner-gated, zambia part frozen.
+
+### Rollback plan
+
+- Safety tag: `pre-refactor-2026-11-10` (confirmed on origin via `git ls-remote --tags origin | grep pre-refactor` → 85aa8db).
+- Rollback = open a PR reverting the merge commits (never force-push to `main`):
+  1. `git checkout -b revert/refactor main`
+  2. `git log --merges --oneline main` → the refactor merges: `634dff3` (#18), `922a3f8` (#17), `3c238eb` (#2), `e478fd1` (#1).
+  3. `git revert -m 1 <merge-sha>` for each (newest first), or `git revert -m 1 634dff3 922a3f8 3c238eb e478fd1`.
+  4. Push the branch, open a PR, owner merges. Pages redeploys on the revert merge (allow ~1 min, then hard-refresh).

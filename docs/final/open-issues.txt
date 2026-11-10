@@ -1,0 +1,6 @@
+15	OPEN	audit: performance — asset page weight (ADVISORY — requires owner approval)	audit	2026-11-10T17:21:33Z
+14	OPEN	audit: correctness — http:// (non-https) link hrefs on zambia page	audit	2026-11-10T17:21:32Z
+13	OPEN	audit: correctness — external links may be dead/hotlink-blocked (owner decision)	audit	2026-11-10T17:21:31Z
+11	OPEN	audit: security — no SRI on CDN script tags (advisory)	audit	2026-11-10T17:21:30Z
+4	OPEN	audit (advisory): Tailwind Play CDN used in production	audit	2026-11-10T17:21:29Z
+3	OPEN	audit: pre-existing color-contrast violations (projects, contact, zambia)	audit	2026-11-10T17:21:26Z
