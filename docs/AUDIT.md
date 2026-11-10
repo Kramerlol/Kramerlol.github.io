@@ -86,18 +86,18 @@ Key metrics: FCP 2.3 s / LCP 2.3 s / CLS 0 on both form factors; TBT 290 ms (des
 | Asset size (advisory) | zambia-infographic.pdf 7.9 MB, cv.pdf 2.6 MB, profile.jpg 2.5 MB (also large historical versions) | advisory — keep-all-files policy, owner decision required |
 | Broken external links | wikitravel 403, africaportal timeout (both likely bot-blocks) | documented |
 
-| SEO | #5 no meta descriptions on any page | filed (audit) |
-| SEO | #6 no Open Graph / Twitter Card tags | filed (audit) |
-| SEO | #7 no canonical tags | filed (audit) |
-| SEO | #8 sitemap.xml + robots.txt missing (404 live) | filed (audit) |
-| SEO | #9 no favicon (404 live, no link rel=icon) | filed (audit) — owner to pick asset |
-| Pages | #10 custom 404 disabled; no 404.html | filed (audit) |
+| SEO | #5 no meta descriptions on any page | addressed in Phase 3 PR, pending merge |
+| SEO | #6 no Open Graph / Twitter Card tags | addressed in Phase 3 PR, pending merge |
+| SEO | #7 no canonical tags | addressed in Phase 3 PR, pending merge |
+| SEO | #8 sitemap.xml + robots.txt missing (404 live) | addressed in Phase 3 PR, pending merge |
+| SEO | #9 no favicon (404 live, no link rel=icon) | addressed in Phase 3 PR, pending merge — auto-generated placeholder monogram, owner may swap |
+| Pages | #10 custom 404 disabled; no 404.html | addressed in Phase 3 PR, pending merge |
 | Security | #11 no SRI on CDN scripts — N/A for Play CDN/gtag (dynamic responses); advisory tied to #4 | filed (audit, advisory) |
-| A11y | #12 skip-navigation links missing on all 5 pages (WCAG 2.4.1) | filed (audit) |
+| A11y | #12 skip-navigation links missing on all 5 pages (WCAG 2.4.1) | addressed in Phase 3 PR, pending merge |
 | Correctness | #13 external links may be dead/hotlink-blocked (wikitravel 403, africaportal timeout) | filed (audit, owner decision) |
 | Correctness | #14 two `http://` hrefs on zambia page → https upgrade | filed (audit, needs owner approval — zambia frozen) |
 | Performance | #15 asset page weight (profile.jpg 2.47 MB, infographic.png 1.79 MB, embedded PDF 7.89 MB, cv.pdf 2.63 MB) | filed (audit, ADVISORY — owner-gated; options = ADD optimized variants, originals stay) |
-| Repo hygiene | #16 README stale/inaccurate (dark-mode issue fixed, wrong clone URL, missing docs/ tree) | filed (audit) |
+| Repo hygiene | #16 README stale/inaccurate (dark-mode issue fixed, wrong clone URL, missing docs/ tree) | addressed in Phase 3 PR, pending merge |
 
 ## Known limitations (owner decisions recorded)
 
@@ -117,3 +117,6 @@ Key metrics: FCP 2.3 s / LCP 2.3 s / CLS 0 on both form factors; TBT 290 ms (des
 - 2026-11-10 (Phase 2): Lighthouse live vs Phase 0b baseline: Perf 90→86 desktop / 94→93 mobile (within run variance + bootstrap script cost), A11y 100→100, BP 96→**100**, SEO 91→91. No regression pattern.
 - 2026-11-10 (Phase 2): Secrets sweep (working tree + last 20 commits): clean — only Lighthouse JSON prose false-positives ("password managers" in audit description text). No `target="_blank"` without `rel="noopener"` (all 5 have `noopener noreferrer`). No inline event handlers besides the theme toggles.
 - 2026-11-10 (Phase 2): Audit is findings-only — 12 new `audit` issues filed (#5–#16), no code changes.
+- 2026-11-10 (Phase 3): `assets/favicon.svg` is an auto-generated placeholder monogram (dark rounded square + white "AK") with Chromium-rendered PNG fallbacks — owner will replace with their own design later.
+- 2026-11-10 (Phase 3): `og:image` uses `assets/profile.jpg` (2.47 MB) — oversized for social previews; advisory tied to #15.
+- 2026-11-10 (Phase 3): canonical URLs match the served `.html` URLs (`https://kramerlol.github.io/<page>.html`); index canonical is the bare root URL.
