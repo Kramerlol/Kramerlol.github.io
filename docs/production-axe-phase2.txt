@@ -1,0 +1,16 @@
+axe-core LIVE verification post-Phase-1 (2026-11-10)
+index.html / light: 0 violations
+index.html / dark: 0 violations
+about.html / light: 0 violations
+about.html / dark: 0 violations
+projects.html / light: 1 violations
+  [serious] color-contrast (Elements must meet minimum color contrast ratio thresholds) - 2 node(s): a[href$="zambia-demography.html"] | .project-card.p-6.border:nth-child(4) > .inline-block.bg-orange-500.hover\:bg-orange-600
+projects.html / dark: 1 violations
+  [serious] color-contrast (Elements must meet minimum color contrast ratio thresholds) - 2 node(s): a[href$="zambia-demography.html"] | .project-card.p-6.border:nth-child(4) > .inline-block.bg-orange-500.hover\:bg-orange-600
+contact.html / light: 1 violations
+  [serious] color-contrast (Elements must meet minimum color contrast ratio thresholds) - 3 node(s): a[href="mailto:akramer.pro@proton.me"] | li:nth-child(2) > .text-blue-500 | a[href$="Kramerlol"]
+contact.html / dark: 0 violations
+zambia-demography.html / light: 1 violations
+  [serious] color-contrast (Elements must meet minimum color contrast ratio thresholds) - 11 node(s): a[href$="zambia-infographic.png"] | .secondary | .citation:nth-child(7) > span | .citation:nth-child(8) > span
+zambia-demography.html / dark: 1 violations
+  [serious] color-contrast (Elements must meet minimum color contrast ratio thresholds) - 27 node(s): a[href="index.html"] | a[href$="about.html"] | a[href$="projects.html"] | a[href$="contact.html"]
