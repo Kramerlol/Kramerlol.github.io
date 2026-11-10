@@ -1,0 +1,75 @@
+npm notice run baseline@1.0.0 npx
+npm notice run 'linkinator' https://kramerlol.github.io --recurse --timeout 15000
+→ crawling https://kramerlol.github.io
+[200] https://kramerlol.github.io/
+[200] https://kramerlol.github.io/styles.css
+[200] https://www.googletagmanager.com/gtag/js?id=G-QNEHHGSYC3
+[200] https://kramerlol.github.io/theme.js
+[200] https://kramerlol.github.io/assets/profile.jpg
+[200] https://cdn.tailwindcss.com/
+[200] https://kramerlol.github.io/index.html
+[200] https://kramerlol.github.io/about.html
+[200] https://kramerlol.github.io/projects.html
+[200] https://kramerlol.github.io/contact.html
+[200] https://kramerlol.github.io/zambia-demography.html
+[200] https://www.mining-technology.com/wp-content/uploads/sites/19/2024/04/min-5-i-770x433.jpg
+[403] https://wikitravel.org/shared/File:Zambia-regions-map.png
+[200] https://github.com/Kramerlol
+[200] https://kramerlol.github.io/cv.pdf
+[200] https://kramerlol.github.io/assets/zambia-infographic.pdf
+[200] https://apps.who.int/nha/database/Select/Indicators/en
+[200] https://www.csis.org/analysis/recommendations-building-zambias-copper-industry
+[200] https://kramerlol.github.io/assets/zambia-analysis.R
+[200] https://vincentarelbundock.github.io/WDI/
+[200] https://kramerlol.github.io/assets/zambia-infographic.png
+[200] https://population.un.org/wpp
+[200] https://www.dw.com/en/nationalizing-zambias-copper-mines/a-56843152
+[200] http://www.wittgensteincentre.org/dataexplorer
+[200] https://www.irh.ae/wp-content/uploads/2024/10/Mopani-Mine-Day-2-068_edited.jpg
+[200] https://nac.org.zm/wp-content/uploads/2026/01/Gemini_Generated_Image_kq8uyxkq8uyxkq8u-300x300.png
+[200] https://pixelz.cc/images/zambia-flag-uhd-4k-wallpaper/
+[200] https://www.linkedin.com/in/andrew-kramer-47346673/
+[0] https://africaportal.org/wp-content/uploads/2023/05/SAIIA_Occasional_Paper_62.pdf
+[200] https://doi.org/10.7202/1058089ar
+[200] https://doi.org/10.55317/9781784135553
+[200] https://discoveryalert.com.au/geology-copper-concentration-zambia-mining-2026/
+[200] https://akramer-pro.shinyapps.io/HC_Econ_Demo_Presentation/
+
+  [200] https://kramerlol.github.io/
+https://kramerlol.github.io/
+  [200] https://kramerlol.github.io/styles.css
+  [200] https://www.googletagmanager.com/gtag/js?id=G-QNEHHGSYC3
+  [200] https://kramerlol.github.io/theme.js
+  [200] https://kramerlol.github.io/assets/profile.jpg
+  [200] https://cdn.tailwindcss.com/
+  [200] https://kramerlol.github.io/index.html
+  [200] https://kramerlol.github.io/about.html
+  [200] https://kramerlol.github.io/projects.html
+  [200] https://kramerlol.github.io/contact.html
+  [200] https://github.com/Kramerlol
+  [200] https://kramerlol.github.io/cv.pdf
+  [200] https://www.linkedin.com/in/andrew-kramer-47346673/
+https://kramerlol.github.io/projects.html
+  [200] https://kramerlol.github.io/zambia-demography.html
+  [200] https://akramer-pro.shinyapps.io/HC_Econ_Demo_Presentation/
+https://kramerlol.github.io/zambia-demography.html
+  [200] https://www.mining-technology.com/wp-content/uploads/sites/19/2024/04/min-5-i-770x433.jpg
+  [403] https://wikitravel.org/shared/File:Zambia-regions-map.png
+  [200] https://kramerlol.github.io/assets/zambia-infographic.pdf
+  [200] https://apps.who.int/nha/database/Select/Indicators/en
+  [200] https://www.csis.org/analysis/recommendations-building-zambias-copper-industry
+  [200] https://kramerlol.github.io/assets/zambia-analysis.R
+  [200] https://vincentarelbundock.github.io/WDI/
+  [200] https://kramerlol.github.io/assets/zambia-infographic.png
+  [200] https://population.un.org/wpp
+  [200] https://www.dw.com/en/nationalizing-zambias-copper-mines/a-56843152
+  [200] http://www.wittgensteincentre.org/dataexplorer
+  [200] https://www.irh.ae/wp-content/uploads/2024/10/Mopani-Mine-Day-2-068_edited.jpg
+  [200] https://nac.org.zm/wp-content/uploads/2026/01/Gemini_Generated_Image_kq8uyxkq8uyxkq8u-300x300.png
+  [200] https://pixelz.cc/images/zambia-flag-uhd-4k-wallpaper/
+  [0] https://africaportal.org/wp-content/uploads/2023/05/SAIIA_Occasional_Paper_62.pdf
+  [200] https://doi.org/10.7202/1058089ar
+  [200] https://doi.org/10.55317/9781784135553
+  [200] https://discoveryalert.com.au/geology-copper-concentration-zambia-mining-2026/
+ERROR: Detected 2 broken links. Scanned 33 links in 3.14 seconds.
+exit: 1

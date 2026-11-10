@@ -1,0 +1,8 @@
+Console errors/warnings + failed requests collected 2026-11-10 from https://kramerlol.github.io/ (Chromium headless, 1440x900 & 390x844, light+dark)
+
+[desktop] pageerror: tailwind is not defined
+[desktop] console.warning: cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+[desktop] after toggle, html.dark present: true
+[mobile] pageerror: tailwind is not defined
+[mobile] console.warning: cdn.tailwindcss.com should not be used in production. To use Tailwind CSS in production, install it as a PostCSS plugin or use the Tailwind CLI: https://tailwindcss.com/docs/installation
+[mobile] after toggle, html.dark present: true

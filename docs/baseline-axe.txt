@@ -1,0 +1,10 @@
+axe-core baseline for https://kramerlol.github.io/ (axe injected into Chromium headless, 2026-11-10)
+
+
+=== desktop / light: 0 violations ===
+
+=== desktop / dark: 0 violations ===
+
+=== mobile / light: 0 violations ===
+
+=== mobile / dark: 0 violations ===
