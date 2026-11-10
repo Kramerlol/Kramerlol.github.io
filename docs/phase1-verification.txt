@@ -1,0 +1,97 @@
+PASS index.html: html.dark follows OS (fresh, dark OS)
+PASS index.html: html.dark absent on light OS
+PASS index.html: body bg differs dark vs light — rgb(17, 24, 39) vs rgb(255, 255, 255)
+PASS index.html: main heading color differs — rgb(243, 244, 246) vs rgb(17, 24, 39)
+PASS index.html: strip bg differs
+PASS index.html: console clean (dark) — no errors
+PASS about.html: html.dark follows OS (fresh, dark OS)
+PASS about.html: html.dark absent on light OS
+PASS about.html: body bg differs dark vs light — rgb(17, 24, 39) vs rgb(255, 255, 255)
+PASS about.html: main heading color differs — rgb(243, 244, 246) vs rgb(17, 24, 39)
+PASS about.html: strip bg differs
+PASS about.html: console clean (dark) — no errors
+PASS projects.html: html.dark follows OS (fresh, dark OS)
+PASS projects.html: html.dark absent on light OS
+PASS projects.html: body bg differs dark vs light — rgb(17, 24, 39) vs rgb(255, 255, 255)
+PASS projects.html: main heading color differs — rgb(243, 244, 246) vs rgb(17, 24, 39)
+PASS projects.html: strip bg differs
+PASS projects.html: console clean (dark) — no errors
+PASS contact.html: html.dark follows OS (fresh, dark OS)
+PASS contact.html: html.dark absent on light OS
+PASS contact.html: body bg differs dark vs light — rgb(17, 24, 39) vs rgb(255, 255, 255)
+PASS contact.html: main heading color differs — rgb(243, 244, 246) vs rgb(17, 24, 39)
+PASS contact.html: strip bg differs
+PASS contact.html: console clean (dark) — no errors
+PASS zambia-demography.html: html.dark follows OS (fresh, dark OS)
+PASS zambia-demography.html: html.dark absent on light OS
+PASS zambia-demography.html: body bg differs dark vs light — rgb(17, 17, 17) vs rgb(255, 255, 255)
+PASS zambia-demography.html: main heading color differs — rgb(230, 238, 248) vs rgb(17, 17, 17)
+PASS zambia-demography.html: console clean (dark) — no errors
+PASS index.html: toggle#0 adds html.dark
+PASS index.html: toggle#0 aria-pressed=true — ["true","true"]
+PASS index.html: toggle#0 body bg changed
+PASS index.html: toggle#0 main color changed
+PASS index.html: toggle#0 back to light
+PASS index.html: toggle#1 adds html.dark
+PASS index.html: toggle#1 aria-pressed=true — ["true","true"]
+PASS index.html: toggle#1 body bg changed
+PASS index.html: toggle#1 main color changed
+PASS index.html: toggle#1 back to light
+PASS index.html: theme persisted to localStorage — dark
+PASS index.html: aria-label switches to "Switch to light mode" — ["Switch to light mode",null]
+PASS index.html: dark persists across reload
+PASS index.html: CLS during toggles = 0 — cls=0
+PASS index.html: console clean (toggle flow) — no errors
+PASS about.html: toggle#0 adds html.dark
+PASS about.html: toggle#0 aria-pressed=true — ["true"]
+PASS about.html: toggle#0 body bg changed
+PASS about.html: toggle#0 main color changed
+PASS about.html: toggle#0 back to light
+PASS about.html: theme persisted to localStorage — dark
+PASS about.html: aria-label switches to "Switch to light mode" — ["Switch to light mode"]
+PASS about.html: dark persists across reload
+PASS about.html: CLS during toggles = 0 — cls=0
+PASS about.html: console clean (toggle flow) — no errors
+PASS projects.html: toggle#0 adds html.dark
+PASS projects.html: toggle#0 aria-pressed=true — ["true"]
+PASS projects.html: toggle#0 body bg changed
+PASS projects.html: toggle#0 main color changed
+PASS projects.html: toggle#0 back to light
+PASS projects.html: theme persisted to localStorage — dark
+PASS projects.html: aria-label switches to "Switch to light mode" — ["Switch to light mode"]
+PASS projects.html: dark persists across reload
+PASS projects.html: CLS during toggles = 0 — cls=0
+PASS projects.html: console clean (toggle flow) — no errors
+PASS contact.html: toggle#0 adds html.dark
+PASS contact.html: toggle#0 aria-pressed=true — ["true"]
+PASS contact.html: toggle#0 body bg changed
+PASS contact.html: toggle#0 main color changed
+PASS contact.html: toggle#0 back to light
+PASS contact.html: theme persisted to localStorage — dark
+PASS contact.html: aria-label switches to "Switch to light mode" — ["Switch to light mode"]
+PASS contact.html: dark persists across reload
+PASS contact.html: CLS during toggles = 0 — cls=0
+PASS contact.html: console clean (toggle flow) — no errors
+PASS zambia-demography.html: toggle#0 adds html.dark
+PASS zambia-demography.html: toggle#0 aria-pressed=true — ["true"]
+PASS zambia-demography.html: toggle#0 body bg changed
+PASS zambia-demography.html: toggle#0 main color changed
+PASS zambia-demography.html: toggle#0 back to light
+PASS zambia-demography.html: theme persisted to localStorage — dark
+PASS zambia-demography.html: aria-label switches to "Switch to light mode" — ["Switch to light mode"]
+PASS zambia-demography.html: dark persists across reload
+PASS zambia-demography.html: CLS during toggles = 0 — cls=0
+PASS zambia-demography.html: console clean (toggle flow) — no errors
+PASS index: light-mode aria-label = "Switch to dark mode" on emoji buttons — ["Switch to dark mode",null]
+PASS axe index.html/light: 0 violations
+PASS axe index.html/dark: 0 violations
+PASS axe about.html/light: 0 violations
+PASS axe about.html/dark: 0 violations
+FAIL axe projects.html/light: 0 violations — color-contrast
+FAIL axe projects.html/dark: 0 violations — color-contrast
+FAIL axe contact.html/light: 0 violations — color-contrast
+PASS axe contact.html/dark: 0 violations
+FAIL axe zambia-demography.html/light: 0 violations — color-contrast
+FAIL axe zambia-demography.html/dark: 0 violations — color-contrast
+
+TOTAL: 90 PASS, 5 FAIL
