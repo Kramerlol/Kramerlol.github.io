@@ -1,0 +1,73 @@
+FINAL live regression gate (2026-11-10)
+
+PASS index.html: toggle#0 flips html.dark
+PASS index.html: toggle#0 body bg computed change — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS index.html: toggle#0 main color computed change — rgb(17, 24, 39) -> rgb(243, 244, 246)
+PASS index.html: toggle#0 aria-pressed=true everywhere
+PASS index.html: toggle#1 flips html.dark
+PASS index.html: toggle#1 body bg computed change — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS index.html: toggle#1 main color computed change — rgb(17, 24, 39) -> rgb(243, 244, 246)
+PASS index.html: toggle#1 aria-pressed=true everywhere
+PASS index.html: localStorage theme=dark
+PASS index.html: persists across reload
+PASS index.html: fresh context follows OS dark
+PASS index.html: console ZERO errors — clean
+PASS index.html: 1 canonical — 1
+PASS index.html: 1 meta description — 1
+PASS index.html: og:title present
+PASS index.html: skip-link present
+PASS index.html: favicon links present
+PASS about.html: toggle#0 flips html.dark
+PASS about.html: toggle#0 body bg computed change — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS about.html: toggle#0 main color computed change — rgb(17, 24, 39) -> rgb(243, 244, 246)
+PASS about.html: toggle#0 aria-pressed=true everywhere
+PASS about.html: localStorage theme=dark
+PASS about.html: persists across reload
+PASS about.html: fresh context follows OS dark
+PASS about.html: console ZERO errors — clean
+PASS about.html: 1 canonical — 1
+PASS about.html: 1 meta description — 1
+PASS about.html: og:title present
+PASS about.html: skip-link present
+PASS about.html: favicon links present
+PASS projects.html: toggle#0 flips html.dark
+PASS projects.html: toggle#0 body bg computed change — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS projects.html: toggle#0 main color computed change — rgb(17, 24, 39) -> rgb(243, 244, 246)
+PASS projects.html: toggle#0 aria-pressed=true everywhere
+PASS projects.html: localStorage theme=dark
+PASS projects.html: persists across reload
+PASS projects.html: fresh context follows OS dark
+PASS projects.html: console ZERO errors — clean
+PASS projects.html: 1 canonical — 1
+PASS projects.html: 1 meta description — 1
+PASS projects.html: og:title present
+PASS projects.html: skip-link present
+PASS projects.html: favicon links present
+PASS contact.html: toggle#0 flips html.dark
+PASS contact.html: toggle#0 body bg computed change — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS contact.html: toggle#0 main color computed change — rgb(17, 24, 39) -> rgb(243, 244, 246)
+PASS contact.html: toggle#0 aria-pressed=true everywhere
+PASS contact.html: localStorage theme=dark
+PASS contact.html: persists across reload
+PASS contact.html: fresh context follows OS dark
+PASS contact.html: console ZERO errors — clean
+PASS contact.html: 1 canonical — 1
+PASS contact.html: 1 meta description — 1
+PASS contact.html: og:title present
+PASS contact.html: skip-link present
+PASS contact.html: favicon links present
+PASS zambia-demography.html: toggle#0 flips html.dark
+PASS zambia-demography.html: toggle#0 body bg computed change — rgb(255, 255, 255) -> rgb(17, 17, 17)
+PASS zambia-demography.html: toggle#0 main color computed change — rgb(17, 17, 17) -> rgb(230, 238, 248)
+PASS zambia-demography.html: toggle#0 aria-pressed=true everywhere
+PASS zambia-demography.html: localStorage theme=dark
+PASS zambia-demography.html: persists across reload
+PASS zambia-demography.html: fresh context follows OS dark
+PASS zambia-demography.html: console ZERO errors — clean
+PASS zambia-demography.html: 1 canonical — 1
+PASS zambia-demography.html: 1 meta description — 1
+PASS zambia-demography.html: og:title present
+PASS zambia-demography.html: skip-link present
+PASS zambia-demography.html: favicon links present
+
+TOTAL: 69 PASS, 0 FAIL

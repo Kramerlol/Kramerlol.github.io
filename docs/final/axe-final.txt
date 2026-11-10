@@ -1,0 +1,11 @@
+axe-core FINAL live verification (2026-11-10)
+index.html / light: 0 violations
+index.html / dark: 0 violations
+about.html / light: 0 violations
+about.html / dark: 0 violations
+projects.html / light: 1 violations (color-contrast:2)
+projects.html / dark: 1 violations (color-contrast:2)
+contact.html / light: 1 violations (color-contrast:3)
+contact.html / dark: 0 violations
+zambia-demography.html / light: 1 violations (color-contrast:11)
+zambia-demography.html / dark: 1 violations (color-contrast:27)
