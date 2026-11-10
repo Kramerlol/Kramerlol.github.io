@@ -86,6 +86,25 @@ Key metrics: FCP 2.3 s / LCP 2.3 s / CLS 0 on both form factors; TBT 290 ms (des
 | Asset size (advisory) | zambia-infographic.pdf 7.9 MB, cv.pdf 2.6 MB, profile.jpg 2.5 MB (also large historical versions) | advisory — keep-all-files policy, owner decision required |
 | Broken external links | wikitravel 403, africaportal timeout (both likely bot-blocks) | documented |
 
+| SEO | #5 no meta descriptions on any page | filed (audit) |
+| SEO | #6 no Open Graph / Twitter Card tags | filed (audit) |
+| SEO | #7 no canonical tags | filed (audit) |
+| SEO | #8 sitemap.xml + robots.txt missing (404 live) | filed (audit) |
+| SEO | #9 no favicon (404 live, no link rel=icon) | filed (audit) — owner to pick asset |
+| Pages | #10 custom 404 disabled; no 404.html | filed (audit) |
+| Security | #11 no SRI on CDN scripts — N/A for Play CDN/gtag (dynamic responses); advisory tied to #4 | filed (audit, advisory) |
+| A11y | #12 skip-navigation links missing on all 5 pages (WCAG 2.4.1) | filed (audit) |
+| Correctness | #13 external links may be dead/hotlink-blocked (wikitravel 403, africaportal timeout) | filed (audit, owner decision) |
+| Correctness | #14 two `http://` hrefs on zambia page → https upgrade | filed (audit, needs owner approval — zambia frozen) |
+| Performance | #15 asset page weight (profile.jpg 2.47 MB, infographic.png 1.79 MB, embedded PDF 7.89 MB, cv.pdf 2.63 MB) | filed (audit, ADVISORY — owner-gated; options = ADD optimized variants, originals stay) |
+| Repo hygiene | #16 README stale/inaccurate (dark-mode issue fixed, wrong clone URL, missing docs/ tree) | filed (audit) |
+
+## Known limitations (owner decisions recorded)
+
+- **`<embed>` of the 7.9 MB infographic PDF is unreliable on iOS Safari / some mobile browsers** (blank render, no fallback message). Owner decision: **KEEP AS IS** — the PNG and PDF download buttons on the page provide alternatives. Do not change without explicit owner approval.
+- **External links may be dead or hotlink-blocked** (issue #13): wikitravel 403 and africaportal timeout from automated probes. Owner decides whether to verify manually and update URLs.
+- **Tailwind Play CDN in production** (issue #4, SRI advisory #11): owner policy is to KEEP it; it also forces the post-CDN config placement for dark mode (see Decisions).
+
 ## Decisions
 
 - 2026-11-10: Safety tag `pre-refactor-2026-11-10` pushed to origin before any branch work.
@@ -94,3 +113,7 @@ Key metrics: FCP 2.3 s / LCP 2.3 s / CLS 0 on both form factors; TBT 290 ms (des
 - 2026-11-10 (Phase 1): Tailwind Play CDN resets `window.tailwind.config` at load — dark-mode config must be set **after** the CDN script tag (pre-CDN guarded init is silently overwritten). Verified empirically.
 - 2026-11-10 (Phase 1): Emoji-only toggle buttons get `aria-label`; buttons with visible text ("Toggle Dark Mode") keep their visible text as accessible name — overriding it fails axe `label-content-name-mismatch`.
 - 2026-11-10 (Phase 1): Tailwind Play CDN rebuilds styles asynchronously after a class toggle — computed-style assertions in tests must allow a short settle time.
+- 2026-11-10 (Phase 2): Post-merge production verification PASSED — 44/44 checks (console clean on all 5 pages incl. no `tailwind is not defined`; computed body/main colors flip page-wide on every toggle; persistence + OS-follow OK). Live axe shows only issue-#3 contrast items. No `bug` issues needed. Evidence: `docs/production-verification-phase1.txt`, `docs/production-axe-phase2.txt`, `docs/screenshots/production-post-phase1/`.
+- 2026-11-10 (Phase 2): Lighthouse live vs Phase 0b baseline: Perf 90→86 desktop / 94→93 mobile (within run variance + bootstrap script cost), A11y 100→100, BP 96→**100**, SEO 91→91. No regression pattern.
+- 2026-11-10 (Phase 2): Secrets sweep (working tree + last 20 commits): clean — only Lighthouse JSON prose false-positives ("password managers" in audit description text). No `target="_blank"` without `rel="noopener"` (all 5 have `noopener noreferrer`). No inline event handlers besides the theme toggles.
+- 2026-11-10 (Phase 2): Audit is findings-only — 12 new `audit` issues filed (#5–#16), no code changes.

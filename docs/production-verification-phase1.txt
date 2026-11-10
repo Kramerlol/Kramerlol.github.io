@@ -1,0 +1,68 @@
+Production verification of https://kramerlol.github.io post-Phase-1 merge (2026-11-10, headless Chromium)
+
+PASS index.html LIVE: toggle#0 html.dark flips
+PASS index.html LIVE: toggle#0 body bg changes — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS index.html LIVE: toggle#0 main content color changes — rgb(17, 24, 39) -> rgb(243, 244, 246)
+PASS index.html LIVE: toggle#0 aria-pressed=true
+PASS index.html LIVE: toggle#1 html.dark flips
+PASS index.html LIVE: toggle#1 body bg changes — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS index.html LIVE: toggle#1 main content color changes — rgb(17, 24, 39) -> rgb(243, 244, 246)
+PASS index.html LIVE: toggle#1 aria-pressed=true
+PASS index.html LIVE: localStorage theme=dark — dark
+PASS index.html LIVE: dark persists across reload
+PASS index.html LIVE: fresh context follows OS dark
+PASS index.html LIVE: console ZERO errors — clean
+PASS about.html LIVE: toggle#0 html.dark flips
+PASS about.html LIVE: toggle#0 body bg changes — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS about.html LIVE: toggle#0 main content color changes — rgb(17, 24, 39) -> rgb(243, 244, 246)
+PASS about.html LIVE: toggle#0 aria-pressed=true
+PASS about.html LIVE: localStorage theme=dark — dark
+PASS about.html LIVE: dark persists across reload
+PASS about.html LIVE: fresh context follows OS dark
+PASS about.html LIVE: console ZERO errors — clean
+PASS projects.html LIVE: toggle#0 html.dark flips
+PASS projects.html LIVE: toggle#0 body bg changes — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS projects.html LIVE: toggle#0 main content color changes — rgb(17, 24, 39) -> rgb(243, 244, 246)
+PASS projects.html LIVE: toggle#0 aria-pressed=true
+PASS projects.html LIVE: localStorage theme=dark — dark
+PASS projects.html LIVE: dark persists across reload
+PASS projects.html LIVE: fresh context follows OS dark
+PASS projects.html LIVE: console ZERO errors — clean
+PASS contact.html LIVE: toggle#0 html.dark flips
+PASS contact.html LIVE: toggle#0 body bg changes — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS contact.html LIVE: toggle#0 main content color changes — rgb(17, 24, 39) -> rgb(243, 244, 246)
+PASS contact.html LIVE: toggle#0 aria-pressed=true
+PASS contact.html LIVE: localStorage theme=dark — dark
+PASS contact.html LIVE: dark persists across reload
+PASS contact.html LIVE: fresh context follows OS dark
+PASS contact.html LIVE: console ZERO errors — clean
+PASS zambia-demography.html LIVE: toggle#0 html.dark flips
+PASS zambia-demography.html LIVE: toggle#0 body bg changes — rgb(255, 255, 255) -> rgb(17, 17, 17)
+PASS zambia-demography.html LIVE: toggle#0 main content color changes — rgb(17, 17, 17) -> rgb(230, 238, 248)
+PASS zambia-demography.html LIVE: toggle#0 aria-pressed=true
+PASS zambia-demography.html LIVE: localStorage theme=dark — dark
+PASS zambia-demography.html LIVE: dark persists across reload
+PASS zambia-demography.html LIVE: fresh context follows OS dark
+PASS zambia-demography.html LIVE: console ZERO errors — clean
+
+TOTAL: 44 PASS, 0 FAIL
+
+axe-core results: see production-axe-phase2.txt (expect only pre-existing contrast items, issue #3)
+
+## Lighthouse: live vs Phase 0b baseline (docs/baseline-{desktop,mobile}.json)
+| Category | Baseline D | Prod D | Baseline M | Prod M |
+|---|---|---|---|---|
+| Performance | 90 | 86 (-4) | 94 | 93 (-1) |
+| Accessibility | 100 | 100 (0) | 100 | 100 (0) |
+| Best Practices | 96 | 100 (+4) | 96 | 100 (+4) |
+| SEO | 91 | 91 (0) | 91 | 91 (0) |
+
+Metrics (prod): desktop FCP 2.4s / LCP 2.4s / TBT 370ms / CLS 0; mobile FCP 2.3s / LCP 2.3s / TBT 200ms / CLS 0.
+Perf delta is small and consistent with run variance + the added theme bootstrap; no regression pattern. Full JSON: production-lighthouse-{desktop,mobile}.json.
+
+## Live asset checks (all 200)
+index.html 4760b, about.html 3336b, contact.html 2570b, projects.html 5337b, zambia-demography.html 16672b, styles.css 2374b, theme.js 2230b, cv.pdf 2625610b, assets/profile.jpg 2473862b, assets/zambia-analysis.R 54944b, assets/zambia-infographic.pdf 7893679b, assets/zambia-infographic.png 1788924b.
+Missing (404): sitemap.xml, robots.txt, favicon.ico, 404.html.
+
+## axe-core (see production-axe-phase2.txt)
+Only the pre-existing color-contrast items from issue #3 (projects: orange buttons; contact: blue-500 links light-theme; zambia: download buttons + citation numbers light, nav links dark). No new violations. index/about: 0 in both themes.
