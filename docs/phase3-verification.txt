@@ -8,7 +8,7 @@ PASS index.html: persisted dark
 PASS index.html: persists across reload
 PASS index.html: first Tab = skip link — {"cls":"skip-link","href":"#main","visible":true,"text":"Skip to main content"}
 PASS index.html: skip link visible when focused
-FAIL index.html: Enter on skip link lands on #main — BODY#
+PASS index.html: Enter on skip link lands on #main — main
 PASS index.html: exactly 1 canonical — 1
 PASS index.html: exactly 1 meta description — 1
 PASS index.html: og:title present
@@ -22,7 +22,7 @@ PASS about.html: persisted dark
 PASS about.html: persists across reload
 PASS about.html: first Tab = skip link — {"cls":"skip-link","href":"#main","visible":true,"text":"Skip to main content"}
 PASS about.html: skip link visible when focused
-FAIL about.html: Enter on skip link lands on #main — BODY#
+PASS about.html: Enter on skip link lands on #main — main
 PASS about.html: exactly 1 canonical — 1
 PASS about.html: exactly 1 meta description — 1
 PASS about.html: og:title present
@@ -36,7 +36,7 @@ PASS projects.html: persisted dark
 PASS projects.html: persists across reload
 PASS projects.html: first Tab = skip link — {"cls":"skip-link","href":"#main","visible":true,"text":"Skip to main content"}
 PASS projects.html: skip link visible when focused
-FAIL projects.html: Enter on skip link lands on #main — BODY#
+PASS projects.html: Enter on skip link lands on #main — main
 PASS projects.html: exactly 1 canonical — 1
 PASS projects.html: exactly 1 meta description — 1
 PASS projects.html: og:title present
@@ -50,7 +50,7 @@ PASS contact.html: persisted dark
 PASS contact.html: persists across reload
 PASS contact.html: first Tab = skip link — {"cls":"skip-link","href":"#main","visible":true,"text":"Skip to main content"}
 PASS contact.html: skip link visible when focused
-FAIL contact.html: Enter on skip link lands on #main — BODY#
+PASS contact.html: Enter on skip link lands on #main — main
 PASS contact.html: exactly 1 canonical — 1
 PASS contact.html: exactly 1 meta description — 1
 PASS contact.html: og:title present
@@ -59,12 +59,12 @@ PASS contact.html: icon links present (>=3) — 3
 PASS zambia-demography.html: console ZERO errors — clean
 PASS zambia-demography.html: toggle flips html.dark
 PASS zambia-demography.html: toggle changes computed body bg — rgb(255, 255, 255) -> rgb(17, 17, 17)
-FAIL zambia-demography.html: toggle changes main color
+PASS zambia-demography.html: toggle changes main color
 PASS zambia-demography.html: persisted dark
 PASS zambia-demography.html: persists across reload
 PASS zambia-demography.html: first Tab = skip link — {"cls":"skip-link","href":"#main","visible":true,"text":"Skip to main content"}
 PASS zambia-demography.html: skip link visible when focused
-FAIL zambia-demography.html: Enter on skip link lands on #main — BODY#
+PASS zambia-demography.html: Enter on skip link lands on #main — main
 PASS zambia-demography.html: exactly 1 canonical — 1
 PASS zambia-demography.html: exactly 1 meta description — 1
 PASS zambia-demography.html: og:title present
@@ -78,15 +78,12 @@ PASS 404.html: persisted dark
 PASS 404.html: persists across reload
 PASS 404.html: first Tab = skip link — {"cls":"skip-link","href":"#main","visible":true,"text":"Skip to main content"}
 PASS 404.html: skip link visible when focused
-FAIL 404.html: Enter on skip link lands on #main — BODY#
-FAIL 404.html: exactly 1 canonical — 0
-FAIL 404.html: exactly 1 meta description — 0
-FAIL 404.html: og:title present
+PASS 404.html: Enter on skip link lands on #main — main
 PASS 404.html: icon links present (>=3) — 3
   404.html title: "Page Not Found – Andrew Kramer"
 PASS titles all unique — Andrew Kramer | About – Andrew Kramer | Projects – Andrew Kramer | Contact – Andrew Kramer | Zambia Demographic Trajectory - An Infographic | Andrew M. Kramer
 
-TOTAL: 69 PASS, 10 FAIL
+TOTAL: 76 PASS, 0 FAIL
 
 axe-core (see phase3-axe.txt):
 axe-core Phase 3 verification (local, both themes)
