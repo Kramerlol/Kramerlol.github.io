@@ -1,0 +1,26 @@
+axe-core Phase 1 verification for local build (both themes, desktop+mobile)
+index.html / light: 0 violations
+  toggle aria-labels: ["Switch to dark mode",null]
+index.html / dark: 0 violations
+  toggle aria-labels: ["Switch to light mode",null]
+about.html / light: 0 violations
+  toggle aria-labels: ["Switch to dark mode"]
+about.html / dark: 0 violations
+  toggle aria-labels: ["Switch to light mode"]
+projects.html / light: 1 violations
+  [serious] color-contrast - Elements must meet minimum color contrast ratio thresholds - 2 node(s)
+  toggle aria-labels: ["Switch to dark mode"]
+projects.html / dark: 1 violations
+  [serious] color-contrast - Elements must meet minimum color contrast ratio thresholds - 2 node(s)
+  toggle aria-labels: ["Switch to light mode"]
+contact.html / light: 1 violations
+  [serious] color-contrast - Elements must meet minimum color contrast ratio thresholds - 3 node(s)
+  toggle aria-labels: ["Switch to dark mode"]
+contact.html / dark: 0 violations
+  toggle aria-labels: ["Switch to light mode"]
+zambia-demography.html / light: 1 violations
+  [serious] color-contrast - Elements must meet minimum color contrast ratio thresholds - 11 node(s)
+  toggle aria-labels: ["Switch to dark mode"]
+zambia-demography.html / dark: 1 violations
+  [serious] color-contrast - Elements must meet minimum color contrast ratio thresholds - 27 node(s)
+  toggle aria-labels: ["Switch to light mode"]

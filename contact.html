@@ -5,9 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact – Andrew Kramer</title>
     <script>
-        tailwind.config = { darkMode: 'class' };
+        // Theme bootstrap: runs before first paint to avoid a flash. Applies the
+        // stored choice, falling back to the OS color-scheme preference.
+        (function () {
+            var stored = null;
+            try { stored = localStorage.getItem("theme"); } catch (e) {}
+            var dark = stored === "dark" ||
+                (stored === null && window.matchMedia("(prefers-color-scheme: dark)").matches);
+            document.documentElement.classList.toggle("dark", dark);
+        })();
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        // Tailwind dark-mode strategy: must be set AFTER the CDN script (the
+        // Play CDN defines the `tailwind` object at load; setting it before is
+        // silently overwritten). This is the documented CDN pattern and raises
+        // no ReferenceError.
+        tailwind.config = { darkMode: "class" };
+    </script>
 </head>
 
 <body class="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
