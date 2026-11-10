@@ -1,0 +1,104 @@
+Phase 3 verification (local http.server :8080, headless Chromium, 2026-11-10)
+
+PASS index.html: console ZERO errors — clean
+PASS index.html: toggle flips html.dark
+PASS index.html: toggle changes computed body bg — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS index.html: toggle changes main color
+PASS index.html: persisted dark
+PASS index.html: persists across reload
+PASS index.html: first Tab = skip link — {"cls":"skip-link","href":"#main","visible":true,"text":"Skip to main content"}
+PASS index.html: skip link visible when focused
+FAIL index.html: Enter on skip link lands on #main — BODY#
+PASS index.html: exactly 1 canonical — 1
+PASS index.html: exactly 1 meta description — 1
+PASS index.html: og:title present
+PASS index.html: icon links present (>=3) — 3
+  index.html title: "Andrew Kramer"
+PASS about.html: console ZERO errors — clean
+PASS about.html: toggle flips html.dark
+PASS about.html: toggle changes computed body bg — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS about.html: toggle changes main color
+PASS about.html: persisted dark
+PASS about.html: persists across reload
+PASS about.html: first Tab = skip link — {"cls":"skip-link","href":"#main","visible":true,"text":"Skip to main content"}
+PASS about.html: skip link visible when focused
+FAIL about.html: Enter on skip link lands on #main — BODY#
+PASS about.html: exactly 1 canonical — 1
+PASS about.html: exactly 1 meta description — 1
+PASS about.html: og:title present
+PASS about.html: icon links present (>=3) — 3
+  about.html title: "About – Andrew Kramer"
+PASS projects.html: console ZERO errors — clean
+PASS projects.html: toggle flips html.dark
+PASS projects.html: toggle changes computed body bg — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS projects.html: toggle changes main color
+PASS projects.html: persisted dark
+PASS projects.html: persists across reload
+PASS projects.html: first Tab = skip link — {"cls":"skip-link","href":"#main","visible":true,"text":"Skip to main content"}
+PASS projects.html: skip link visible when focused
+FAIL projects.html: Enter on skip link lands on #main — BODY#
+PASS projects.html: exactly 1 canonical — 1
+PASS projects.html: exactly 1 meta description — 1
+PASS projects.html: og:title present
+PASS projects.html: icon links present (>=3) — 3
+  projects.html title: "Projects – Andrew Kramer"
+PASS contact.html: console ZERO errors — clean
+PASS contact.html: toggle flips html.dark
+PASS contact.html: toggle changes computed body bg — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS contact.html: toggle changes main color
+PASS contact.html: persisted dark
+PASS contact.html: persists across reload
+PASS contact.html: first Tab = skip link — {"cls":"skip-link","href":"#main","visible":true,"text":"Skip to main content"}
+PASS contact.html: skip link visible when focused
+FAIL contact.html: Enter on skip link lands on #main — BODY#
+PASS contact.html: exactly 1 canonical — 1
+PASS contact.html: exactly 1 meta description — 1
+PASS contact.html: og:title present
+PASS contact.html: icon links present (>=3) — 3
+  contact.html title: "Contact – Andrew Kramer"
+PASS zambia-demography.html: console ZERO errors — clean
+PASS zambia-demography.html: toggle flips html.dark
+PASS zambia-demography.html: toggle changes computed body bg — rgb(255, 255, 255) -> rgb(17, 17, 17)
+FAIL zambia-demography.html: toggle changes main color
+PASS zambia-demography.html: persisted dark
+PASS zambia-demography.html: persists across reload
+PASS zambia-demography.html: first Tab = skip link — {"cls":"skip-link","href":"#main","visible":true,"text":"Skip to main content"}
+PASS zambia-demography.html: skip link visible when focused
+FAIL zambia-demography.html: Enter on skip link lands on #main — BODY#
+PASS zambia-demography.html: exactly 1 canonical — 1
+PASS zambia-demography.html: exactly 1 meta description — 1
+PASS zambia-demography.html: og:title present
+PASS zambia-demography.html: icon links present (>=3) — 3
+  zambia-demography.html title: "Zambia Demographic Trajectory - An Infographic | Andrew M. Kramer"
+PASS 404.html: console ZERO errors — clean
+PASS 404.html: toggle flips html.dark
+PASS 404.html: toggle changes computed body bg — rgb(255, 255, 255) -> rgb(17, 24, 39)
+PASS 404.html: toggle changes main color
+PASS 404.html: persisted dark
+PASS 404.html: persists across reload
+PASS 404.html: first Tab = skip link — {"cls":"skip-link","href":"#main","visible":true,"text":"Skip to main content"}
+PASS 404.html: skip link visible when focused
+FAIL 404.html: Enter on skip link lands on #main — BODY#
+FAIL 404.html: exactly 1 canonical — 0
+FAIL 404.html: exactly 1 meta description — 0
+FAIL 404.html: og:title present
+PASS 404.html: icon links present (>=3) — 3
+  404.html title: "Page Not Found – Andrew Kramer"
+PASS titles all unique — Andrew Kramer | About – Andrew Kramer | Projects – Andrew Kramer | Contact – Andrew Kramer | Zambia Demographic Trajectory - An Infographic | Andrew M. Kramer
+
+TOTAL: 69 PASS, 10 FAIL
+
+axe-core (see phase3-axe.txt):
+axe-core Phase 3 verification (local, both themes)
+index.html / light: 0 violations
+index.html / dark: 0 violations
+about.html / light: 0 violations
+about.html / dark: 0 violations
+projects.html / light: 1 violations (color-contrast:2)
+projects.html / dark: 1 violations (color-contrast:2)
+contact.html / light: 1 violations (color-contrast:3)
+contact.html / dark: 0 violations
+zambia-demography.html / light: 1 violations (color-contrast:11)
+zambia-demography.html / dark: 1 violations (color-contrast:27)
+404.html / light: 0 violations
+404.html / dark: 0 violations

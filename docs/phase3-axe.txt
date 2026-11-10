@@ -1,0 +1,13 @@
+axe-core Phase 3 verification (local, both themes)
+index.html / light: 0 violations
+index.html / dark: 0 violations
+about.html / light: 0 violations
+about.html / dark: 0 violations
+projects.html / light: 1 violations (color-contrast:2)
+projects.html / dark: 1 violations (color-contrast:2)
+contact.html / light: 1 violations (color-contrast:3)
+contact.html / dark: 0 violations
+zambia-demography.html / light: 1 violations (color-contrast:11)
+zambia-demography.html / dark: 1 violations (color-contrast:27)
+404.html / light: 0 violations
+404.html / dark: 0 violations
